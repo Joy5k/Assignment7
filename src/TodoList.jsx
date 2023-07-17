@@ -35,9 +35,10 @@ function TodoList() {
   return (
     <div className="todo-container">
       <h1>Todo List</h1>
+      <p>If your task is completed.Just click on the item that will be marked</p>
       <form onSubmit={addTask}>
-        <input type="text" value={task} onChange={handleInputChange} placeholder="Enter your task" />
-        <button type="submit">Add Task</button>
+        <input className='inputField' type="text" value={task} onChange={handleInputChange} placeholder="Enter your task" />
+        <button className='submitBtn' type="submit">Add Task</button>
       </form>
       <ul className="todo-list">
         {tasksList.map((task, index) => (
