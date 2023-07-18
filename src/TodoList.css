@@ -1,6 +1,6 @@
 /* TodoList.css */
 .todo-container {
-    max-width: 400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background-color: #94c2e5;
@@ -18,7 +18,7 @@
   .todo-form {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
   .inputField {
@@ -27,7 +27,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.2s ease;
-    padding: 12px 0;
+    padding: 12px 5px;
     background: rgb(157, 206, 197);
   }
   
@@ -70,6 +70,7 @@
     text-decoration: line-through;
     
   }
+ 
   
   .todo-item span {
     flex: 1;
@@ -90,5 +91,15 @@
   
   .todo-item button:hover {
     background-color: #d32f2f;
+    transition: 0.5s;
+
   }
-  
+  .color-green{
+    background:green;
+    margin-right: 5px;
+    border: none;
+  }
+  .color-green:hover{
+    background-color: #45a049 !important;
+    transition: 0.5s;
+  }

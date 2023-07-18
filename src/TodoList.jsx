@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import  { useState } from 'react';
 import './TodoList.css'; // Import the CSS file for styling
 
 function TodoList() {
@@ -35,7 +35,7 @@ function TodoList() {
   return (
     <div className="todo-container">
       <h1>Todo List</h1>
-      <p>If your task is completed.Just click on the item that will be marked</p>
+      <p>If your task is completed, just click on the item or complete button and it will be marked as completed.</p>
       <form onSubmit={addTask}>
         <input className='inputField' type="text" value={task} onChange={handleInputChange} placeholder="Enter your task" />
         <button className='submitBtn' type="submit">Add Task</button>
@@ -44,6 +44,9 @@ function TodoList() {
         {tasksList.map((task, index) => (
           <li key={index} className={`todo-item ${task.completed ? 'completed' : ''}`}>
             <span onClick={() => toggleComplete(index)}>{task.description}</span>
+            {
+              task.completed ?  <button className='color-green' onClick={() => toggleComplete(index)}>Completed</button> : <button className='color-green' onClick={() => toggleComplete(index)} >Complete</button>
+          }
             <button onClick={() => removeTask(index)}>Delete</button>
           </li>
         ))}
